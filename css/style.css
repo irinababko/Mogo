@@ -109,7 +109,7 @@ a{
     display: block;
 }
 .project-block .container img{
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    /*box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);*/
 }
 .project-block .item-1 img:first-child{
     margin-bottom: 5px;
@@ -526,6 +526,9 @@ a{
     .project-video p{
         padding: 0 15px;
     }
+    .video{
+        text-align: center;
+    }
     .owl-stage{
         /*padding-left: 30px !important;*/
         /*padding-right: 30px !important;*/
@@ -575,6 +578,10 @@ a{
         font-size: 16px;
         padding: 20px 0 40px;
     }
+    video iframe{
+        width: 400px;
+        height: auto;
+    }
 }
 @media screen and (max-width: 375px){
     .title-block{
@@ -622,6 +629,10 @@ a{
     }
     .project-info__top img.hor {
         padding-top: 0;
+    }
+    .video iframe{
+        width: 300px !important;
+        height: auto !important;
     }
     .contacts{
         background-size: 100%;

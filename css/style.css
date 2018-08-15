@@ -29,6 +29,10 @@ a{
 .owl-carousel.owl-loaded.slide-mob{
     display: none;
 }
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
+    -ms-touch-action: auto;
+        touch-action: auto;
+  }
 .main{
     /* max-width: 1920px; */
     margin: 0 auto;

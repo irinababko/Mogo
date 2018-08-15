@@ -19,6 +19,7 @@
 }
 body{
     font-family: 'gothampro-light';
+    background-color: black;
 }
 a{
     text-decoration: none;
@@ -28,6 +29,10 @@ a{
 .owl-carousel.owl-loaded.slide-mob{
     display: none;
 }
+.main{
+    /* max-width: 1920px; */
+    margin: 0 auto;
+}
 .title-block{
     font-family: 'gothampro-light';
     background: url("../img/bg.jpg") #08141f;
@@ -35,7 +40,7 @@ a{
     background-position: center;
     height: 100vh;
     text-align: center;
-    max-width: 1920px;
+    
     margin: 0 auto;
     color: white;
     display: flex;
@@ -47,9 +52,10 @@ a{
     flex-flow: column;
     align-items: center;
     margin: auto;
+    /* margin-top: 10%; */
 }
 .title-block img.logo {
-    padding-top: 200px;
+    padding-top: 150px;
     padding-bottom: 15px;
 }
 .title-block img.logo-title{
@@ -173,7 +179,7 @@ a{
 .project-block .text {
     color: white;
     position: absolute;
-    top: 57%;
+    top: 50%;
     left: 48%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -250,7 +256,7 @@ a{
 }
 .project-info__top img.vert{
     max-width: 308px;
-    min-width: 200px;
+    /* min-width: 200px; */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
 }
 .project-info__top img.hor{
@@ -360,6 +366,10 @@ a{
     width: 100%;
     height: 100%;
 }
+.video iframe{
+    width: 560px;
+    height: 315px;
+}
 .contacts{
     background: url("../img/bg.jpg") no-repeat #08141f;
     background-size: cover;
@@ -396,6 +406,7 @@ a{
     .project-video {
         padding-right: 0;
     }
+
 }
 
 @media screen and (max-width: 1500px){
@@ -423,6 +434,45 @@ a{
     }
 }
 @media screen and (max-width: 1024px) {
+    .project{
+        padding-bottom: 0;
+    }
+    .project.project-1{
+        flex-flow: column;
+        padding-top: 30px;
+    }
+    .project .back{
+        top: -20px;
+    }
+    .project-info{
+        width: 100%;
+        padding-right: 0px;
+    }
+    .project-video{
+        width: 100%;
+        padding-top: 30px;
+        /* min-height: 100px; */
+    }
+    .project-video .video{
+        text-align: center;
+    }
+    .project-info__bottom{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        /* position: absolute;
+        bottom: 0px; */
+        position: relative;
+        padding-right: 0px;
+    }
+    .project-block .text img{
+        padding-top: 30px;
+    }
+    .contacts p{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 768px) {
     .title-block img.logo {
         padding-top: 60px;
         padding-bottom: 15px;
@@ -435,8 +485,9 @@ a{
         padding: 0;
     }
     .project.project-1{
-        background: #08141f;
+        /* background: #08141f; */
         position: relative;
+        padding-top: 0;
     }
     .project .back{
         position: absolute;
@@ -444,7 +495,7 @@ a{
         top: inherit;
         text-align: center;
         z-index: 10;
-        padding-bottom: 25px;
+        padding-bottom: 15px;
     }
     .project-info{
         width: 100%;
@@ -534,10 +585,11 @@ a{
         /*padding-right: 30px !important;*/
     }
     .contacts p{
-        width: 100%;
+        /* width: 100%;
+        padding: 0 70px; */
     }
     .contacts h3{
-        padding-top: 200px;
+        padding-top: 0px;
     }
 
 }
@@ -554,6 +606,13 @@ a{
     .project.project-1:nth-child(even){
         background: #08141f;
     }
+    .title-block p{
+        padding: 0 70px;
+    }
+    .contacts h3{
+        padding-top: 0px;
+    }
+    
 }
 @media screen and (max-width: 600px){
     .no-js .owl-carousel.slide-one,
@@ -578,12 +637,35 @@ a{
         font-size: 16px;
         padding: 20px 0 40px;
     }
-    video iframe{
-        width: 400px;
-        height: auto;
+    .video iframe{
+        width: 400px !important;
+        height: auto !important;
     }
 }
-@media screen and (max-width: 375px){
+@media screen and (max-width: 420px){
+    .video iframe{
+        width: 300px !important;
+        height: auto !important;
+    }
+    .title-block a{
+        padding-top: 40px !important;
+    }
+    .title-block p{
+        padding: 0 15px;
+        padding-top: 20px !important;
+    }
+    .title-block button{
+        margin-top: 60px;
+    }
+    .project-block {
+        padding: 20px 0px;
+        background: #08141f;
+    }
+    .contacts p{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 320px){
     .title-block{
         height: auto;
         background-size: 100%;
@@ -591,7 +673,7 @@ a{
         background-repeat: no-repeat;
     }
     .title-block img.logo {
-        padding-top: 60px;
+        padding-top: 30px;
         padding-bottom: 15px;
     }
     .title-block img.logo-title{
@@ -624,6 +706,9 @@ a{
         font-size: 16px;
         padding: 20px 0 40px;
     }
+    .project .back{
+        /* padding-bottom: 25px; */
+    }
     .project-info__bottom {
         /*padding-bottom: 100px;*/
     }
@@ -646,5 +731,10 @@ a{
     .contacts h3{
         padding-top: 80px;
         padding-bottom: 75px;
+    }
+}
+@media screen and (max-width: 375px){
+    .contacts h3{
+        padding-top: 35px;
     }
 }
